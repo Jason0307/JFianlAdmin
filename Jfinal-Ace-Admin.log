@@ -1,0 +1,85 @@
+
+2014-12-24 09:49:46
+[WARN]-[Thread: http-8080-2]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2014-12-24 16:48:57
+[WARN]-[Thread: http-8080-1]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /admin/tables/
+
+2014-12-24 16:53:46
+[WARN]-[Thread: http-8080-2]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /admin/record/list?_search=false&nd=1419411226239&rows=10&page=1&sidx=&sord=asc
+
+2014-12-24 16:56:36
+[WARN]-[Thread: http-8080-2]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /admin/record/list?_search=false&nd=1419411396367&rows=10&page=1&sidx=&sord=asc
+
+2014-12-24 16:57:13
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-24 16:57:15
+[ERROR]-[Thread: main]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin. 
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'Jfinal-Ace-Admin.BaseModel' doesn't exist
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'Jfinal-Ace-Admin.BaseModel' doesn't exist
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:48)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:171)
+	at com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin.start(AutoTableBindPlugin.java:119)
+	at com.jfinal.core.Config.startPlugins(Config.java:87)
+	at com.jfinal.core.Config.configJFinal(Config.java:48)
+	at com.jfinal.core.JFinal.init(JFinal.java:67)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:49)
+	at org.eclipse.jetty.servlet.FilterHolder.doStart(FilterHolder.java:119)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:724)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:265)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1250)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:706)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:492)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.doStart(HandlerWrapper.java:95)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:277)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:64)
+	at com.jfinal.server.JettyServer.doStart(JettyServer.java:120)
+	at com.jfinal.server.JettyServer.start(JettyServer.java:64)
+	at com.jfinal.core.JFinal.start(JFinal.java:159)
+	at com.jfinal.aceadmin.common.JFinalAceAdminConfig.main(JFinalAceAdminConfig.java:74)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'Jfinal-Ace-Admin.BaseModel' doesn't exist
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2677)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2627)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1556)
+	at com.alibaba.druid.pool.DruidPooledStatement.executeQuery(DruidPooledStatement.java:143)
+	at com.jfinal.plugin.activerecord.TableBuilder.doBuild(TableBuilder.java:63)
+	at com.jfinal.plugin.activerecord.TableBuilder.build(TableBuilder.java:40)
+	... 21 more
+
+2014-12-24 16:59:06
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-24 16:59:12
+[WARN]-[Thread: qtp1095999115-18]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /JFnialAdmin/admin/tables/jqGridPlugin
+
+2014-12-24 16:59:21
+[WARN]-[Thread: qtp1095999115-16]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /JFnialAdmin/
+
+2014-12-24 16:59:25
+[WARN]-[Thread: qtp1095999115-21]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /JFnialAdmin/admin
+
+2014-12-24 17:01:24
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-24 17:01:30
+[WARN]-[Thread: qtp1095999115-18]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /JFnialAdmin/admin
+
+2014-12-24 17:01:59
+[WARN]-[Thread: qtp1095999115-18]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /JFnialAdmin/admin
+
+2014-12-24 17:02:10
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
