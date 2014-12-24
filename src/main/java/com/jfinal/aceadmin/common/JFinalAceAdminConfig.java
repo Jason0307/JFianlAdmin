@@ -7,6 +7,7 @@ import com.jfinal.aceadmin.controller.RecordController;
 import com.jfinal.aceadmin.forms.FormsController;
 import com.jfinal.aceadmin.gallery.GalleryController;
 import com.jfinal.aceadmin.index.IndexController;
+import com.jfinal.aceadmin.model.BaseModel;
 import com.jfinal.aceadmin.morepage.MorePageController;
 import com.jfinal.aceadmin.otherpage.OtherPageController;
 import com.jfinal.aceadmin.tables.TablesController;
@@ -51,13 +52,16 @@ public class JFinalAceAdminConfig extends JFinalConfig {
 		me.add("/admin/record/list",RecordController.class);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void configPlugin(Plugins p) {
 		DruidPlugin druidPlugin = new DruidPlugin(getProperty("jdbcUrl"),
 				getProperty("user"), getProperty("password"));
 		AutoTableBindPlugin autoTableBindPlugin = new AutoTableBindPlugin(
 				druidPlugin);
 		autoTableBindPlugin.setShowSql(true);
+		autoTableBindPlugin.addExcludeClasses(BaseModel.class);
 		p.add(druidPlugin).add(autoTableBindPlugin);
+		
 		/*QuartzPlugin quartzPlugin = new QuartzPlugin("job.properties");
 		p.add(new EhCachePlugin()).add(quartzPlugin);*/
 	}

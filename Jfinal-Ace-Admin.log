@@ -83,3 +83,6 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'Jfi
 
 2014-12-24 17:02:10
 [ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-24 17:21:01
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
