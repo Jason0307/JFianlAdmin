@@ -27,7 +27,7 @@ public class RecordController extends Controller {
 		String name = getPara("name");
 		String note = getPara("note");
 		String ship = getPara("ship");
-		boolean stock = getParaToBoolean("stock");
+		boolean stock = getParaToBoolean("stock",false);
 		String oper = getPara("oper");
 		CommodityRecord commodityRecord = new CommodityRecord();
 		commodityRecord.set("sdate", sdate).set("name", name).set("note", note).set("ship", ship).set("stock", stock);
