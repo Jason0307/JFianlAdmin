@@ -324,7 +324,7 @@ pageBreadCrumbs>
 										index : 'id',
 										width : 60,
 										sorttype : "int",
-										editable : true
+										editable : false
 									},
 									{
 										name : 'sdate',
@@ -332,7 +332,8 @@ pageBreadCrumbs>
 										width : 90,
 										editable : true,
 										sorttype : "date",
-										unformat : pickDate
+										formatter : 'date',
+										formatoptions:{srcformat:'Y-m-d',newformat:'Y-m-d'}
 									},
 									{
 										name : 'name',
@@ -351,7 +352,7 @@ pageBreadCrumbs>
 										editable : true,
 										edittype : "checkbox",
 										editoptions : {
-											value : "Yes:No"
+											value : "True:False"
 										},
 										unformat : aceSwitch
 									},
@@ -362,7 +363,7 @@ pageBreadCrumbs>
 										editable : true,
 										edittype : "select",
 										editoptions : {
-											value : "FE:FedEx;IN:InTime;TN:TNT;AR:ARAMEX"
+											value : "FedEx:FedEx;InTime:InTime;TNT:TNT;ARAMEX:ARAMEX"
 										}
 									}, {
 										name : 'note',
@@ -383,7 +384,7 @@ pageBreadCrumbs>
 							pager : pager_selector,
 							altRows : true,
 							//toppager: true,
-
+							editurl : "/JFnialAdmin/admin/record/oper",
 							multiselect : true,
 							//multikey: "ctrlKey",
 							multiboxonly : true,
@@ -406,7 +407,6 @@ pageBreadCrumbs>
 								}, 0);
 							},
 
-							editurl : "/dummy.html",//nothing is saved
 							caption : "jqGrid with inline editing"
 
 						//,autowidth: true,

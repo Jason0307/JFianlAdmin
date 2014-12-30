@@ -86,3 +86,506 @@ Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'Jfi
 
 2014-12-24 17:21:01
 [ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-24 17:23:22
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-24 17:29:06
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-25 17:15:36
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-25 17:17:16
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-25 17:17:50
+[ERROR]-[Thread: qtp937821402-20]-[com.jfinal.core.ActionHandler.handle()]: /admin/record/list?_search=true&nd=1419499070563&rows=10&page=1&sidx=&sord=asc&filters=%7B%22groupOp%22%3A%22AND%22%2C%22rules%22%3A%5B%7B%22field%22%3A%22id%22%2C%22op%22%3A%22eq%22%2C%22data%22%3A%221%22%7D%2C%7B%22field%22%3A%22stock%22%2C%22op%22%3A%22eq%22%2C%22data%22%3A%221%22%7D%5D%7D&searchField=&searchString=&searchOper=
+com.jfinal.plugin.activerecord.ActiveRecordException: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ANDstock = 1' at line 1
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:490)
+	at com.jfinal.plugin.activerecord.Db.paginate(Db.java:349)
+	at com.jfinal.aceadmin.model.BaseModel.findByPagination(BaseModel.java:101)
+	at com.jfinal.aceadmin.controller.RecordController.index(RecordController.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.core.ActionInvocation.invoke(ActionInvocation.java:55)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:73)
+	at com.jfinal.ext.handler.ContextPathHandler.handle(ContextPathHandler.java:47)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:926)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:988)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:635)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ANDstock = 1' at line 1
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2490)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2651)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2683)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2144)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2310)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:227)
+	at com.jfinal.plugin.activerecord.DbPro.query(DbPro.java:69)
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:460)
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:488)
+	... 34 more
+
+2014-12-25 17:18:20
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-25 17:23:51
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-25 17:32:23
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 10:20:12
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 10:22:12
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 10:22:27
+[ERROR]-[Thread: qtp1581818081-21]-[com.jfinal.core.ActionHandler.handle()]: /admin/record/edit
+com.jfinal.plugin.activerecord.ActiveRecordException: com.jfinal.plugin.activerecord.ActiveRecordException: pageNumber and pageSize must be more than 0
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:490)
+	at com.jfinal.plugin.activerecord.Db.paginate(Db.java:349)
+	at com.jfinal.aceadmin.model.BaseModel.findByPagination(BaseModel.java:101)
+	at com.jfinal.aceadmin.controller.RecordController.index(RecordController.java:16)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.core.ActionInvocation.invoke(ActionInvocation.java:55)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:73)
+	at com.jfinal.ext.handler.ContextPathHandler.handle(ContextPathHandler.java:47)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: pageNumber and pageSize must be more than 0
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:453)
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:488)
+	... 34 more
+
+2014-12-26 10:26:02
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 10:26:02
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 10:26:16
+[ERROR]-[Thread: qtp438984209-21]-[com.jfinal.core.ActionHandler.handle()]: /admin/record/edit
+com.jfinal.plugin.activerecord.ActiveRecordException: com.jfinal.plugin.activerecord.ActiveRecordException: pageNumber and pageSize must be more than 0
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:490)
+	at com.jfinal.plugin.activerecord.Db.paginate(Db.java:349)
+	at com.jfinal.aceadmin.model.BaseModel.findByPagination(BaseModel.java:101)
+	at com.jfinal.aceadmin.controller.RecordController.index(RecordController.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.core.ActionInvocation.invoke(ActionInvocation.java:55)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:73)
+	at com.jfinal.ext.handler.ContextPathHandler.handle(ContextPathHandler.java:47)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.jfinal.plugin.activerecord.ActiveRecordException: pageNumber and pageSize must be more than 0
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:453)
+	at com.jfinal.plugin.activerecord.DbPro.paginate(DbPro.java:488)
+	... 34 more
+
+2014-12-26 10:27:15
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 10:27:15
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 10:27:31
+[ERROR]-[Thread: qtp2046188302-20]-[com.jfinal.core.ActionHandler.handle()]: /admin/record/edit
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template "/admin/record/edit.html" not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:92)
+	at com.jfinal.ext.handler.ContextPathHandler.handle(ContextPathHandler.java:47)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template "/admin/record/edit.html" not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:742)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:665)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 26 more
+
+2014-12-26 10:28:00
+[ERROR]-[Thread: qtp2046188302-20]-[com.jfinal.core.ActionHandler.handle()]: /admin/record/edit
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template "/admin/record/edit.html" not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:92)
+	at com.jfinal.ext.handler.ContextPathHandler.handle(ContextPathHandler.java:47)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template "/admin/record/edit.html" not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:742)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:665)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 26 more
+
+2014-12-26 11:49:55
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 11:49:55
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 11:50:56
+[ERROR]-[Thread: qtp483668656-16]-[com.jfinal.core.ActionHandler.handle()]: /admin/record/edit
+com.jfinal.render.RenderException: java.io.FileNotFoundException: Template "/admin/record/edit.html" not found.
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:130)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:92)
+	at com.jfinal.ext.handler.ContextPathHandler.handle(ContextPathHandler.java:47)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: Template "/admin/record/edit.html" not found.
+	at freemarker.template.Configuration.getTemplate(Configuration.java:742)
+	at freemarker.template.Configuration.getTemplate(Configuration.java:665)
+	at com.jfinal.render.FreeMarkerRender.render(FreeMarkerRender.java:126)
+	... 26 more
+
+2014-12-26 11:53:52
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 11:53:52
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 14:36:41
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 14:36:41
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 14:37:32
+[ERROR]-[Thread: qtp483668656-18]-[com.jfinal.core.ActionHandler.handle()]: /admin/record/edit
+java.lang.RuntimeException: Can not parse the parameter "yes" to boolean value.
+	at com.jfinal.core.Controller.toBoolean(Controller.java:268)
+	at com.jfinal.core.Controller.getParaToBoolean(Controller.java:277)
+	at com.jfinal.aceadmin.controller.RecordController.edit(RecordController.java:30)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.core.ActionInvocation.invoke(ActionInvocation.java:55)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:73)
+	at com.jfinal.ext.handler.ContextPathHandler.handle(ContextPathHandler.java:47)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2014-12-26 14:40:22
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 14:40:23
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 14:42:14
+[ERROR]-[Thread: qtp483668656-19]-[com.jfinal.core.ActionHandler.handle()]: /admin/record/edit
+java.lang.NumberFormatException: For input string: "_empty"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:492)
+	at java.lang.Integer.parseInt(Integer.java:527)
+	at com.jfinal.core.Controller.toInt(Controller.java:213)
+	at com.jfinal.core.Controller.getParaToInt(Controller.java:222)
+	at com.jfinal.aceadmin.controller.RecordController.edit(RecordController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.jfinal.core.ActionInvocation.invoke(ActionInvocation.java:55)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:73)
+	at com.jfinal.ext.handler.ContextPathHandler.handle(ContextPathHandler.java:47)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:72)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1307)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:453)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:560)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1072)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:382)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1006)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:365)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:485)
+	at org.eclipse.jetty.server.AbstractHttpConnection.content(AbstractHttpConnection.java:937)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.content(AbstractHttpConnection.java:998)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:856)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:240)
+	at org.eclipse.jetty.server.AsyncHttpConnection.handle(AsyncHttpConnection.java:82)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint.handle(SelectChannelEndPoint.java:628)
+	at org.eclipse.jetty.io.nio.SelectChannelEndPoint$1.run(SelectChannelEndPoint.java:52)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:745)
+
+2014-12-26 15:13:54
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 15:13:54
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 15:17:51
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 15:17:51
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 15:39:05
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 15:39:05
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 15:41:30
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 15:41:30
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 16:11:24
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 16:11:24
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 16:22:26
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-26 16:22:26
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:25:41
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:25:42
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:31:44
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:31:44
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:35:41
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:35:41
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:49:10
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:49:10
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:50:26
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:50:26
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:50:37
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:50:37
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:55:30
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:55:30
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:56:01
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:56:01
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFnialAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 09:56:08
+[WARN]-[Thread: qtp826186714-20]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /admin
+
+2014-12-30 09:56:24
+[WARN]-[Thread: qtp826186714-21]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2014-12-30 09:56:55
+[WARN]-[Thread: qtp826186714-16]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /admin/
+
+2014-12-30 09:56:59
+[WARN]-[Thread: qtp826186714-19]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /
+
+2014-12-30 09:57:22
+[WARN]-[Thread: qtp826186714-18]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /admin
+
+2014-12-30 10:01:46
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFinalAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 10:01:46
+[ERROR]-[Thread: main]-[com.jfinal.ext.kit.ClassSearcher.findjarFiles()]: file serach error：C:\Users\jason.zhu\workspace\JFinalAdmin\src\main\webapp\WEB-INF\lib is not a dir！
+
+2014-12-30 10:01:48
+[WARN]-[Thread: qtp483668656-19]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /

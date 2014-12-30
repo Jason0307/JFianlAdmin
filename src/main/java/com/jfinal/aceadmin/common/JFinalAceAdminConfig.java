@@ -3,7 +3,6 @@ package com.jfinal.aceadmin.common;
 import java.util.Properties;
 
 import com.jfinal.aceadmin.calendar.CalendarController;
-import com.jfinal.aceadmin.controller.RecordController;
 import com.jfinal.aceadmin.forms.FormsController;
 import com.jfinal.aceadmin.gallery.GalleryController;
 import com.jfinal.aceadmin.index.IndexController;
@@ -22,6 +21,7 @@ import com.jfinal.config.Routes;
 import com.jfinal.core.JFinal;
 import com.jfinal.ext.handler.ContextPathHandler;
 import com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin;
+import com.jfinal.ext.route.AutoBindRoutes;
 import com.jfinal.plugin.druid.DruidPlugin;
 
 public class JFinalAceAdminConfig extends JFinalConfig {
@@ -33,9 +33,9 @@ public class JFinalAceAdminConfig extends JFinalConfig {
 	}
 	
 	public void configConstant(Constants me) {
-		// 如果生产环境配置文件存在，则优先加载该配置，否则加载开发环境配置文件
 		loadProp("a_little_config_pro.txt", "a_little_config.txt");
 		me.setDevMode(getPropertyToBoolean("devMode", false));
+		System.out.println(me.getViewType());
 	}
 	
 	public void configRoute(Routes me) {
@@ -49,7 +49,7 @@ public class JFinalAceAdminConfig extends JFinalConfig {
 		me.add("/admin/ui",UIElementController.class, "/admin/ui_elements");
 		me.add("/admin/widgets", WidgetsController.class);
 		me.add("/admin/calendar", CalendarController.class);
-		me.add("/admin/record/list",RecordController.class);
+		me.add(new AutoBindRoutes());
 	}
 	
 	@SuppressWarnings("unchecked")
@@ -71,10 +71,10 @@ public class JFinalAceAdminConfig extends JFinalConfig {
 	}
 	
 	public void configHandler(Handlers me) {
-		me.add(new ContextPathHandler("contextPath"));//设置上下文路径  防止样式丢失
+		me.add(new ContextPathHandler("contextPath"));//
 	}
 	
 	public static void main(String[] args) {
-		JFinal.start("src/main/webapp", 8080, "/JFnialAdmin", 5);
+		JFinal.start("src/main/webapp", 8080, "/JFinalAdmin", 5);
 	}
 }

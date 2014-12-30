@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filter>
+<key name="eq" value=" = " data="${data}"></key>
+<key name="ne" value=" != " data="${data}"></key>
+<key name="bw" value=" LIKE " data="'${data}%'"></key>
+<key name="bn" value=" NOT LIKE " data="'${data}%'"></key>
+<key name="ew" value=" LIKE " data="'%${data}'"></key>
+<key name="en" value=" NOT LIKE " data="'%${data}'"></key>
+<key name="cn" value=" LIKE " data="'%${data}%'"></key>
+<key name="nc" value=" NOT LIKE " data="'%${data}%'"></key>
+<key name="nu" value=" IS NULL "></key>
+<key name="nn" value=" IS NOT NULL "></key>
+<key name="in" value=" IN " data="(${data})"></key>
+<key name="ni" value=" NOT IN " data="(${data})"></key>
+</filter>

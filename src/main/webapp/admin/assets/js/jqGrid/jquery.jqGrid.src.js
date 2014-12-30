@@ -7208,7 +7208,7 @@ $.jgrid.extend({
 			onInitializeSearch: null,
 			afterRedraw : null,
 			afterChange: null,
-			closeAfterSearch : false,
+			closeAfterSearch : true,
 			closeAfterReset: false,
 			closeOnEscape : false,
 			searchOnEnter : false,
